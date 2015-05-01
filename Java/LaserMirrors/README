@@ -1,0 +1,17 @@
+#LaserMirrors
+
+Simulates the firing of a laser into a two-dimensional grid (uses 2D arrays) that contains mirrors. The mirrors are 
+placed at 45-degree angles to the grid and reflect the laser beam by 90 degrees. The grid is displayed using simple text 
+characters. A mirror will be displayed as a forward or backward slash, and a laser beam will be a dash or a vertical 
+bar. One can choose to fire from any row by changing the number when the scanner asks for it in the console. Also, the
+text character grid can be changed as long as the convention below is folowed.
+
+A left-leaning mirror reflects the laser from a southward direction to an eastward direction or from westward to
+northward:
+|
+\-or from eastward to southward or from northward to westward:
+-\
+|
+A right-leaning mirror reflects the laser from southward to westward or from eastward to 
+northward:
+|
