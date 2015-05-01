@@ -1,0 +1,16 @@
+#Redbot
+
+The Redbot uses ADC, PWM, USART and Timers to read values through its sensors to determine how to follow the black tap.
+
+ADC
+  Gets the integer values of what the 3 sensors read. Different configurations were needed for sensor1, sensor2, and
+  sensor3.
+  
+PWM, Timers
+  Uses PWM and Timers to move the motors of the Redbot. Different configurations were needed for moving forwards,
+  moving backgrounds, turning right, and turning left.
+  
+Algorithm
+  Conditional statemnts were used to check where the Redbot was. For example, if it was on a sharp right corner,
+  it will read the black tape on its middle and right sensor and therefore, the algorithm can be calculated that way.
+  USART was used for debugging purposes when testing to see what the Redbot sensors were reading.
