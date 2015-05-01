@@ -1,0 +1,5 @@
+#Agents&Spaces
+
+A small object-oriented application interactive ficiton game in Java that uses Java classes to organize the spaces/rooms.
+It is a spatial simulator with spaces and portals/doors to connect the spaces together. Agents/person will be able to 
+move from space to space through portals. 
