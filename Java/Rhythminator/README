@@ -1,0 +1,6 @@
+#Rhythminator
+
+A sound sequencer which plays a sequence of sounds in a rhythmic manner. It uses a set of pre-defined sounds that are
+stored in sound files. It displays a grid in which the horizontal row represents notes and the verticle column represents
+beats that are listed across the bottom in the yellow boxes. Gray boxes will appear when the user clicked to have that
+note/instrument play on that beat.
