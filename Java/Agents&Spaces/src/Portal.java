@@ -1,5 +1,11 @@
 public class Portal
 {
+	public Portal(String name, String direction, Space destination)
+	{
+		_name = name;
+		_direction = direction;
+		_destination = destination;
+	}
 	private String _name;
 	public String getName()
 	{
@@ -7,7 +13,7 @@ public class Portal
 	}
 	public void setName(String newName)
 	{
-			_name = newName;
+		_name = newName;
 	}
 	private String _direction;
 	public String getDirection()
@@ -16,7 +22,7 @@ public class Portal
 	}
 	public void setDirection(String newDirection)
 	{
-			_direction = newDirection;
+		_direction = newDirection;
 	}
 	private Space _destination;
 	public Space getDestination()

@@ -1,46 +1,60 @@
+import java.io.File;
 import java.util.Scanner;
-public class CommandInterpreter 
+import jeff.imagewindow.ImageWindow;
+import jeff.textconsole.TextConsole;
+
+public class CommandInterpreter
 {
-	public static void run(Agent a1)
+	private static void _showImage(ImageWindow imageWindow, Agent agent)
 	{
-		Scanner kbd = new Scanner(System.in);
+		String agentlocation = agent.getLocation().getName();
+		String imageName = agentlocation + ".jpg";
+		File imageDir = new File("data", "images");
+		File imageFile = new File(imageDir, imageName);
+		imageWindow.loadImage(imageFile);
+	}
+	public static void run(Agent a1, TextConsole textConsole, ImageWindow window)
+	{
 		Boolean control = true;
-		System.out.println(a1 + " is in " + a1.getLocation());
+		textConsole.println(a1 + " is in " + a1.getLocation());
+		_showImage(window, a1);
 		while(control)
 		{
-			System.out.print("==>");
+			textConsole.print("==>");
 			String s;
-			s = kbd.next();
+			s = textConsole.readLine();
 			if(s.equals("quit"))
 			{
 				control = false;
+				System.exit(0);
 			}
 			else if(s.equals("help"))
 			{
-				System.out.println("go: Moves the agent through the space's portal");
-				System.out.println("help: Displays a list of all the commands that this program can use");
-				System.out.println("look: Displays the long description of the agent's current location");
-				System.out.println("where Displays the short description of the agent's current location");
+				textConsole.println("go: Moves the agent through the space's portal");
+				textConsole.println("help: Displays a list of all the commands that this program can use");
+				textConsole.println("look: Displays the long description of the agent's current location");
+				textConsole.println("where Displays the short description of the agent's current location");
 			}
 			else if(s.equals("where"))
 			{
 				Space sw = a1.getLocation();
 				String str = sw.toString();
-				System.out.println(str);
+				textConsole.println(str);
 			}
 			else if(s.equals("look"))
 			{
 				Space sl = a1.getLocation();
 				String str = sl.toStringLong();
-				System.out.println(str);
+				textConsole.println(str);
 			}
 			else if(s.equals("go"))
 			{		
-				a1.usePortal();
+				a1.usePortal(textConsole);
+				_showImage(window, a1);
 			}
 			else
 			{
-				System.out.println("Sorry, I don't understand " + "'" + s + "'" );
+				textConsole.println("Sorry, I don't understand " + "'" + s + "'" );
 			}
 		}
 	}

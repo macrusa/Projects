@@ -1,9 +1,3 @@
-// Homework #3 Calculator
-// CSE 1102-001 Object Orientated Design and Programing Spring 2014
-// Nancy Cheng
-// Saahil Moledina 007L
-// 2-3-14
-
 import java.util.Scanner;
 
 public class Calculator

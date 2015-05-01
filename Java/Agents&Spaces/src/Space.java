@@ -1,5 +1,13 @@
 public class Space
 {
+	public Space(String spacename, String description, String image, Portal portal)
+	{
+		_name = spacename;
+		_description = description;
+		_portal = portal;
+		_imagename = image;
+		this.setPortal(getPortal());
+	}
 	private String _name;
 	public String getName()
 	{
@@ -8,7 +16,7 @@ public class Space
 	public void setName(String newName)
 	{
 		_name = newName;
-		
+
 	}
 	private String _description;
 	public String getDescription()
@@ -28,6 +36,11 @@ public class Space
 	{
 		_portal = newPortal;
 	}
+	private String _imagename;
+	public String getImagename()
+	{
+		return _imagename;
+	}
 	public String toString()
 	{
 		return _name;
@@ -41,10 +54,8 @@ public class Space
 		}
 		else
 		{
-			String newS = s + "with a " + _portal.toStringLong();
+			String newS = s + " with a " + _portal.toStringLong();
 			return newS;
 		}
 	}
 }
-	
-	

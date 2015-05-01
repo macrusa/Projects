@@ -1,7 +1,3 @@
-// CSE1102 Program 2
-// Spring 2014
-// Nancy Cheng
-
 import robotgrid.Grid;
 import robotgrid.GridServer;
 import robotgrid.Heading;
