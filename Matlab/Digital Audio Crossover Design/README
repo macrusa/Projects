@@ -1,0 +1,42 @@
+#Digital Audio Crossover Design
+
+Decomposed a music file, X, and white noise, Y, through designed lowpass, bandpass, and highpass filters.
+
+Main.m
+  Lowpass
+    - Lowpass bode plot
+    - Time domain plot of lowpass filtered music
+    - Frequency domain plot of lowpass filtered music
+    - Power spectral density of lowpass filtered music
+    - Plays lowpass filtered music
+  
+  Bandpass
+    - Bandpass bode plot
+    - Time domain plot of bandpass filtered music
+    - Frequency domain plot of bandpass filtered music
+    - Power spectral density of bandpass filtered music
+    - Plays bandpass filtered music
+    
+  Highpass
+    - Highpass bode plot
+    - Time domain plot of highpass filtered music
+    - Frequency domain plot of highpass filtered music
+    - Power spectral density of highpass filtered music
+    - Plays highpass filtered music
+    
+convertRp.m
+  - Function for Rp
+  
+convertRs.m
+  - Function for Rs
+  
+convertWp.m
+  - Function for Wp
+  
+convertWs.m
+  - Function for Ws
+
+ProjectData2.m
+  - Sound file
+
+
