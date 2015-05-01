@@ -1,0 +1,33 @@
+#Laser Tag
+
+Project that is modeled after a laser tag game.
+
+Main.c
+  Algorithm for laser tag game. It has 3 interrupts with different priorities: reciver/decoder highest. It starts with
+  a start sound effect and waits for any of the interrupts to happen such as receiving a signal, hitting the shoot or 
+  reload buttons. The shoot button makes a shooting sound, decrement the ammo count on the seven segment display, and
+  sends a unique signal of the player that can be altered in IR.c. When this is received by the  other player, the 
+  external interrupt is triggered and the receiver decodes the message. It sees if the message is a unique message or 
+  its own and registers the hit. If the player is hit, the speaker will make a got hit sound effect from speaker.c and
+  decrement the health of the player who  got hit. The reload button will reset the ammo back to the maximum amount 
+  that can be changed in Main.c and will make a reloading sound effect. Once a player's health hits 0, the speaker will
+  play the game over sound effect.
+
+IR.c
+  Transmitter:
+    - Sends 38kHz 
+  Receiver/Decoder:
+    - Detects and decode messages to check who that message is for (Player1 or Player2)
+    - Uses external interrupt
+  
+Buttons.c
+  Pin Change Interrupts for Reload and Shooting buttons
+
+USART.c
+  Communication with computer for debugging purposes
+  
+Speaker.c
+  Functions for sound effects that are later used in Main.c
+  
+SevenSegment.c
+  Seven sigment display that shows health and ammo.
