@@ -1,6 +1,12 @@
 #Laser Tag
 
-Project that is modeled after a laser tag game.
+Project that is modeled after a laser tag game. Each board will have the ability to send and receive IR signals.
+To send a signal, one has to click the shoot button in which a sound effect will come from the speaker and the 
+seven segment display will decrement the ammo. If one receives a signal, it will be decoded to see if the message
+is its own message or the other player. If the signal is from the other player, a sound effect will come from the
+speaker and the seven segment display will display the decremented health. The reload button will create a sound 
+effect from the speaker and set the ammo back to its maximum value that will be displayed on the the seven segment 
+display.
 
 Main.c
   Algorithm for laser tag game. It has 3 interrupts with different priorities: reciver/decoder highest. It starts with
